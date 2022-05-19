@@ -1,0 +1,13 @@
+.board {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  background-color: chocolate;
+  height: 80vh;
+  width: 80vw;
+  border: 5px solid black;
+  min-width: calc(10em + 40px);
+  overflow: scroll;
+}
