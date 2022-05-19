@@ -14,9 +14,15 @@ export default function DetailsPost() {
         <h1>{post.title}</h1>
         <h3>{post.name}</h3>
         <p>{post.info}</p>
-        <h5>{post.contact}</h5>
+        <h5 className={styles.contact}>{post.contact}</h5>
         <p>{post.created_at}</p>
       </div>
+      {/* {currentUser &&
+        <>
+          <Link to={`/posts/${params.id}/edit`}>Edit Post</Link>
+          <button onClick={deletePost}>Delete Post</button>
+        </>
+       } */}
     </>
   );
 }

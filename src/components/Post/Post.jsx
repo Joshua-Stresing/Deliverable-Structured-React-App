@@ -15,8 +15,16 @@ export default function Post() {
       {posts.map((post) => (
         <Link to={`/posts/${post.id}`}>
           <div className={styles.post} key={post.id}>
-            <h3>{post.name}</h3>
-            <h3>{post.title}</h3>
+            <h3>
+              Title:
+              <br></br>
+              {post.title}
+            </h3>
+            <h3>
+              Name:
+              <br></br>
+              {post.name}
+            </h3>
           </div>
         </Link>
       ))}
