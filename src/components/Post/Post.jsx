@@ -10,16 +10,16 @@ export default function Post() {
   if (loading) return <h1>Loading Posts</h1>;
 
   return (
-    <div>
+    <>
       {error && <p>{error}</p>}
       {posts.map((post) => (
-        // <Link to={`/post/${post.id}`}>
-        <div className={styles.post} key={post.id}>
-          <h3>{post.name}</h3>
-          <h3>{post.title}</h3>
-        </div>
-        // </Link>
+        <Link to={`/posts/${post.id}`}>
+          <div className={styles.post} key={post.id}>
+            <h3>{post.name}</h3>
+            <h3>{post.title}</h3>
+          </div>
+        </Link>
       ))}
-    </div>
+    </>
   );
 }

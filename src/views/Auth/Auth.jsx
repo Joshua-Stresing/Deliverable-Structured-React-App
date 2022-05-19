@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
 import { signInUser, signUpUser } from '../../services/user';
 
-import './Auth.css';
+import styles from './Auth.css';
 
 export default function Auth() {
   const [email, setEmail] = useState('');
@@ -37,13 +37,13 @@ export default function Auth() {
     <div>
       <>
         <h1
-          className={signInUp === 'Sign-In' ? 'active' : 'inactive'}
+          className={signInUp === 'Sign-In' ? styles.active : styles.inactive}
           onClick={() => setSignInUp('Sign-In')}
         >
           Sign In
         </h1>
         <h1
-          className={signInUp === 'Sign-Up' ? 'active' : 'inactive'}
+          className={signInUp === 'Sign-Up' ? styles.active : styles.inactive}
           onClick={() => setSignInUp('Sign-Up')}
         >
           Sign Up

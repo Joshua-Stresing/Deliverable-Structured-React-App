@@ -6,9 +6,8 @@ import styles from './BulletBoard.css';
 export default function BulletBoard() {
   return (
     <>
-      {/* <Header /> */}
+      <h1 className={styles.board_label}>Bulletin-Board</h1>
       <div className={styles.board}>
-        <h1>Bulletin-Board</h1>
         <Post />
       </div>
     </>

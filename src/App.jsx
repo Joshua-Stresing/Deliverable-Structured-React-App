@@ -3,6 +3,7 @@ import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import { PrivateRoute } from './components/privateRoute';
 import BulletBoard from './views/BulletBoard/BulletBoard';
 import { UserProvider } from './context/context';
+import Details from './views/Details/Details';
 
 export default function App() {
   return (
@@ -10,11 +11,16 @@ export default function App() {
       <UserProvider>
         <BrowserRouter>
           <Switch>
-            <Route path="/login">
+            <Route exact path="/login">
               <Auth />
             </Route>
-            <Route path="/">
+
+            <Route exact path="/">
               <BulletBoard />
+            </Route>
+
+            <Route exact path="/posts/:id">
+              <Details />
             </Route>
           </Switch>
         </BrowserRouter>
