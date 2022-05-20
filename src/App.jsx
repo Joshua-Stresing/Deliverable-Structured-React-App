@@ -4,7 +4,7 @@ import { PrivateRoute } from './components/privateRoute';
 import BulletBoard from './views/BulletBoard/BulletBoard';
 import { UserProvider } from './context/context';
 import Details from './views/Details/Details';
-import Header from './components/Header';
+import Header from './components/Header/Header';
 import AddPost from './components/AddPost/AddPost';
 
 export default function App() {

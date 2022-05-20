@@ -13,8 +13,8 @@ export default function Post() {
     <>
       {error && <p>{error}</p>}
       {posts.map((post) => (
-        <Link to={`/posts/${post.id}`}>
-          <div className={styles.post} key={post.id}>
+        <Link to={`/posts/${post.id}`} key={post.id}>
+          <div className={styles.post}>
             <h3>
               Title:
               <br></br>
