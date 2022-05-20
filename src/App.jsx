@@ -4,12 +4,15 @@ import { PrivateRoute } from './components/privateRoute';
 import BulletBoard from './views/BulletBoard/BulletBoard';
 import { UserProvider } from './context/context';
 import Details from './views/Details/Details';
+import Header from './components/Header';
+import AddPost from './components/AddPost/AddPost';
 
 export default function App() {
   return (
     <div className="App">
       <UserProvider>
         <BrowserRouter>
+          <Header />
           <Switch>
             <Route exact path="/login">
               <Auth />
@@ -19,9 +22,13 @@ export default function App() {
               <BulletBoard />
             </Route>
 
-            <Route exact path="/posts/:id">
+            <PrivateRoute exact path="/add">
+              <AddPost />
+            </PrivateRoute>
+
+            <PrivateRoute exact path="/posts/:id">
               <Details />
-            </Route>
+            </PrivateRoute>
           </Switch>
         </BrowserRouter>
       </UserProvider>
