@@ -17,6 +17,8 @@ export default function usePostDetail() {
     history.push(`/`);
   };
 
+  const deletePost = () => {};
+
   //   const params = useParams();
   // ^This is going to be used to link to the edit.^
   const { id } = useParams();

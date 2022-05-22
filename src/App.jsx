@@ -6,6 +6,7 @@ import { UserProvider } from './context/context';
 import Details from './views/Details/Details';
 import Header from './components/Header/Header';
 import AddPost from './components/AddPost/AddPost';
+import Edit from './components/Edit/Edit';
 
 export default function App() {
   return (
@@ -29,6 +30,10 @@ export default function App() {
             <PrivateRoute exact path="/posts/:id">
               <Details />
             </PrivateRoute>
+
+            <Route exact path="/posts/:id/edit">
+              <Edit />
+            </Route>
           </Switch>
         </BrowserRouter>
       </UserProvider>

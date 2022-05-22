@@ -1,29 +1,16 @@
 import React from 'react';
-import useAddPost from '../../hooks/useAddPost';
+import useEdit from '../../hooks/useEdit';
 
-export default function AddPost() {
-  const [
-    title,
-    name,
-    info,
-    contact,
-    error,
-    message,
-    setTitle,
-    setName,
-    setInfo,
-    setContact,
-    setError,
-    handleAddPost,
-  ] = useAddPost();
+export default function Edit() {
+  const [title, name, info, contact, error, message, submitEdit] = useEdit();
 
   return (
-    <>
+    <div>
       {message}
-      Make A Note
+      Edit Page
       {error && (
         <p>
-          {error} <span onClick={() => setError('')}>Testing Error</span>
+          {error} <span onClick={() => setError('')}>Error With Edit</span>
         </p>
       )}
       <form>
@@ -62,8 +49,8 @@ export default function AddPost() {
             onChange={(e) => setContact(e.target.value)}
           />
         </label>
-        <button onClick={handleAddPost}>Create</button>
+        <button onClick={submitEdit}>Edit</button>
       </form>
-    </>
+    </div>
   );
 }
