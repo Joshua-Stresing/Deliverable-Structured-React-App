@@ -43,6 +43,7 @@ export default function DetailsPost() {
         )}
       </div>
       <div>
+        // still need to get the nested route going
         {/* <Route exact path={`/posts/:id/edit`}>
           <Edit />
         </Route> */}
