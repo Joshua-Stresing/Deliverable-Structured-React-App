@@ -1,6 +1,6 @@
 import Auth from './views/Auth/Auth';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
-import { PrivateRoute } from './components/privateRoute';
+import { PrivateRoute } from './components/PrivateRoute';
 import BulletBoard from './views/BulletBoard/BulletBoard';
 import { UserProvider } from './context/context';
 import Details from './views/Details/Details';
